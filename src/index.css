@@ -1,0 +1,12 @@
+.title {
+  color: blue;
+}
+.label-style {
+  font-weight: bold;
+  margin-right: 10px;
+}
+.input-style {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+}
