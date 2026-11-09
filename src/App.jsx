@@ -1,12 +1,17 @@
 import './App.css'
+import Esercizio1 from './components/esercizio1'
+import Esercizio2Navbar from './components/esercizio2Navbar'
+import Esercizio2Header from './components/esercizio2Header'
+import Esercizio2List from './components/esercizio2List'
 
 function App() {
   
   return (
     <>
-      <h1 className="title">Benvenuto in React!</h1>
-      <label htmlFor="nome" className="label-style">Nome:</label>
-      <input type="text" id="nome" name="nome" className="input-style" />
+      <Esercizio2Navbar />
+      <Esercizio1 />
+      <Esercizio2Header />
+      <Esercizio2List />
     </>
   )
 }
