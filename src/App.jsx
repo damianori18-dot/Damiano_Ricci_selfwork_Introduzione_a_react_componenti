@@ -1,17 +1,19 @@
 import './App.css'
-import Esercizio1 from './components/esercizio1'
-import Esercizio2Navbar from './components/esercizio2Navbar'
-import Esercizio2Header from './components/esercizio2Header'
-import Esercizio2List from './components/esercizio2List'
+import Navbar from './components/Navbar'
+import Header from './components/Header'
+import List from './components/List'
+import Hero from './components/hero'
+import Components from './components/components'
 
 function App() {
-  
+
   return (
     <>
-      <Esercizio2Navbar />
-      <Esercizio1 />
-      <Esercizio2Header />
-      <Esercizio2List />
+      <Navbar />
+      <Hero />
+      <Header />
+      <List />
+      <Components/>
     </>
   )
 }
