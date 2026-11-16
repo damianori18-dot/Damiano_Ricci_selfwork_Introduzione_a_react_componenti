@@ -6,13 +6,13 @@ import Hero from './components/hero'
 import Components from './components/components'
 
 function App() {
-
+  const listItems = ['Meta', 'Netflix', 'Airbnb'];
   return (
     <>
       <Navbar />
       <Hero />
       <Header />
-      <List />
+      <List items={listItems}/>
       <Components/>
     </>
   )
