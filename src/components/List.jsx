@@ -1,12 +1,10 @@
-export default function List({items}) {
+import Items from "./Items";
+export default function List({children}) {
     return (
         <ul className="d-flex justify-content-center gap-3">
-            <li className="list-group-item fw-semibold color-a">Tecnologia scelta da:</li>
-            {items.map((item) => (
-                <li className="list-group-item" key={item}>
-                    {item}
-                </li>
-            ))}
+            {children}
         </ul>
     );
 }
+
+List.Items = Items
