@@ -1,3 +1,5 @@
+import Button from "./Button"
+
 export default function Counter({ children }) {
 
     return (
@@ -6,3 +8,5 @@ export default function Counter({ children }) {
         </>
     )
 }
+
+Counter.Button = Button

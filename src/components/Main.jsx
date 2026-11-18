@@ -1,3 +1,5 @@
+import Section from "./Section"
+
 export default function Main({children}) {
     return (
         <>
@@ -7,3 +9,5 @@ export default function Main({children}) {
         </>
     )
 }
+
+Main.Section = Section

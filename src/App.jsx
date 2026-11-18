@@ -5,12 +5,6 @@ import Header from './components/Header'
 import List from './components/List'
 import Hero from './components/hero'
 import Main from './components/Main'
-import Section from './components/Section'
-import Counter from './components/counter'
-import Form from './components/form'
-import Button from './components/Button';
-import Input from './components/Input';
-import Card from './components/Card';
 
 function App() {
   // list
@@ -65,52 +59,52 @@ function App() {
       </List>
       <Main>
 
-        <Section>
+        <Main.Section>
 
           <div className="col-12">
             <h2 className="crimson-text-bold">Prova alcune delle funzionalità dei componenti React</h2>
           </div>
           <div className="col-12 col-md-6">
-            <Counter>
+            <Main.Section.Counter>
               <h4 className="crimson-text-bold">Counter: {count}</h4>
               <div className="d-grid gap-2">
-                <Button onClick={() => addCounter(count)}>Add</Button>
-                <Button onClick={() => subCounter(count)}>Subtract</Button>
+                <Main.Section.Counter.Button onClick={() => addCounter(count)}>Add</Main.Section.Counter.Button>
+                <Main.Section.Counter.Button onClick={() => subCounter(count)}>Subtract</Main.Section.Counter.Button>
               </div>
-            </Counter>
+            </Main.Section.Counter>
           </div>
           <hr />
 
-        </Section>
+        </Main.Section>
 
-        <Section>
+        <Main.Section>
 
           <div className="col-12">
-            <Form onSubmit={handleSubmit}>
+            <Main.Section.Form onSubmit={handleSubmit}>
 
               <div className="row gap-2 mb-5 justify-content-center">
                 <div className="col-12">
                   <label className="label-style" htmlFor='name'>Name:</label>
-                  <Input value={name}
+                  <Main.Section.Form.Input value={name}
                     id='name'
                     onChange={handleName} />
                 </div>
 
                 <div className="col-12">
                   <label className="label-style" htmlFor='email'>Email:</label>
-                  <Input value={email}
+                  <Main.Section.Form.Input value={email}
                     id='email'
                     onChange={handleEmail} />
                 </div>
 
                 <div className="col-12">
-                  <Button type="submit">Submit</Button>
+                  <Main.Section.Form.Button type="submit">Submit</Main.Section.Form.Button>
                 </div>
               </div>
 
-            </Form>
+            </Main.Section.Form>
 
-            <Card>
+            <Main.Section.Card>
               <div className="row row-cols-1 row-cols-md-3 g-4 my-3">
                 {cards.map((card) => (
                   <div className="col" key={card.email}>
@@ -124,10 +118,10 @@ function App() {
                   </div>
                 ))}
               </div>
-            </Card>
+            </Main.Section.Card>
           </div>
 
-        </Section>
+        </Main.Section>
 
       </Main>
     </>
