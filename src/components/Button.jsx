@@ -1,5 +1,5 @@
-export default function Button({onClick, children, type = 'button'}) {
+export default function Button({onClick, children, bg}) {
     return (
-        <button type={type} className="btn bg-s" onClick={onClick} data-bs-theme='dark'>{children}</button>
+        <button type="submit" className={"btn " + bg} onClick={onClick} data-bs-theme='dark'>{children}</button>
     )
 }

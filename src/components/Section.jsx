@@ -1,6 +1,7 @@
 import Card from "./Card"
 import Counter from "./counter"
 import Form from "./form"
+import LoadingData from "./loadingData"
 
 export default function Section({ children }) {
     return (
@@ -15,3 +16,4 @@ export default function Section({ children }) {
 Section.Counter = Counter
 Section.Form = Form
 Section.Card = Card
+Section.LoadingData = LoadingData
