@@ -1,11 +1,10 @@
 import './App.css'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Navbar from './components/Navbar'
 import Header from './components/Header'
 import List from './components/List'
 import Hero from './components/hero'
 import Main from './components/Main'
-import Button from './components/Button';
 
 function App() {
   // list
@@ -44,38 +43,6 @@ function App() {
     setName('');
     setEmail('');
   };
-
-  // loadingData
-  const [users, setUsers] = useState([]);
-  const [trigger, setTrigger] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
-
-  const handleClick = () => {
-    if (isVisible) {
-      setIsVisible(false)
-      setTrigger(false)
-      setUsers(null)
-    }
-    else {
-      setIsVisible(true)
-      setTrigger(true)
-    }
-  };
-
-
-  const getData = async () => {
-    const promise = await fetch('https://jsonplaceholder.typicode.com/users');
-    const json = await promise.json();
-    setUsers(json);
-    console.log(json);
-
-  }
-
-  useEffect(() => {
-    if (trigger) {
-      getData();
-    }
-  }, [trigger])
 
   return (
     <>
@@ -157,16 +124,7 @@ function App() {
         </Main.Section>
         
         <Main.Section>
-          <Main.Section.LoadingData>
-            <Button onClick={handleClick} bg='bg-s'>Mostra utenti</Button>
-          </Main.Section.LoadingData>
-          <List flexDirection="flex-column">
-
-            {isVisible && users && users.map((user) => (
-              <List.Items key={user.id}>{user.name} / {user.email}</List.Items>
-            ))}
-
-          </List>
+          <Main.Section.LoadingData />
         </Main.Section>
 
       </Main>
